@@ -50,7 +50,13 @@ input:invalid {
 	padding-bottom: 2.5rem;
 }
 
-.nav-button a:link, .nav-button {
+.white-box {
+	background-color: black;
+	width: 98%;
+	border: 100px #e5e5e8;
+}
+
+.nav-button a:link, .nav-button, .nav-button a:visited {
 	background-color: #00a8ff;
 	color: white;
 	list-style: none;
@@ -59,8 +65,10 @@ input:invalid {
   height: 2.8rem;
   line-height: 45px;
   text-align: center;
-  display: inline-block;
   text-decoration: none;
+	display: inline-flex;
+	justify-content: space-around;
+	border-radius: 0.4rem;
 }
 
 .submitButton {
