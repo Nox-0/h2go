@@ -1,0 +1,97 @@
+* {
+	margin: 0rem;
+	padding: 0rem;
+	box-sizing: border-box;
+	font-family: arial;
+}
+
+h1 {
+	color: white;
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+/* Firefox automatically sets a box shadow to red if you put in incorrect input and doesn't take away the box shadow even after a reload. This makes it so that the function is overridden and doesn't show the box shadow. */
+input:invalid {
+	box-shadow: none !important;
+}
+
+#nav-bar-container {
+	background-color: green;
+	color: #FFF;
+	display: flex;
+	justify-content: center;
+}
+
+#nav-bar {
+	background-color: grey;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#logo-image {
+	width: 15rem;
+	height: auto;
+}
+
+#cart-image {
+	width: 2rem;
+	height: auto;
+}
+
+#blueBoxForm {
+	display: flex;
+	justify-content: center;
+	background-color: #00a8ff;
+	width: 36rem;
+	padding: 1rem;
+	padding-bottom: 2.5rem;
+}
+
+.nav-button a:link, .nav-button {
+	background-color: #00a8ff;
+	color: white;
+	list-style: none;
+	width: 10rem;
+  border: none;
+  height: 2.8rem;
+  line-height: 45px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.submitButton {
+	width: 16rem;
+	height: 4rem;
+	font-size: 2.5rem;
+	font-weight: bold;
+	border: transparent;
+	background-color: #28749b;
+	color: white;
+}
+
+.error {
+	color: red;
+	text-align: center;
+}
+
+.formelement
+{
+	width: 100%;
+	margin: 5px auto;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+.textfield
+{
+	width: 20rem;
+	height: 2.25rem;
+	padding-left: 0.5rem;
+	font-size: 1rem;
+	border: transparent;
+}
