@@ -16,19 +16,22 @@ input:invalid {
 	box-shadow: none !important;
 }
 
-#nav-bar-container {
-	background-color: green;
-	color: #FFF;
+#nav-buttons {
+	width: auto;
+	background-color: red;
+	width: 60rem;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 }
 
 #nav-bar {
-	background-color: grey;
+	padding: 0rem 1rem;
 	width: 100%;
+	height: 7.5rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: 2rem;
 }
 
 #logo-image {
@@ -41,6 +44,13 @@ input:invalid {
 	height: auto;
 }
 
+#cart-button {
+	text-decoration: none;
+	color: white;
+	background-color: #00a8ff;
+	border-radius: 0.2rem;
+}
+
 #blueBoxForm {
 	display: flex;
 	justify-content: center;
@@ -50,10 +60,45 @@ input:invalid {
 	padding-bottom: 2.5rem;
 }
 
-.white-box {
-	background-color: black;
+#white-box {
+	display: flex;
+	justify-content: center;
+	background-color: white;
 	width: 98%;
-	border: 100px #e5e5e8;
+	border: 3rem solid #e5e5e8;
+	padding: 5rem;
+}
+
+#white-box-holder {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#image-header {
+	color: #002D62;
+	position: absolute;
+	bottom: 16rem;
+}
+
+#shop-now-button {
+	background-color: white;
+	border: 0.2rem solid #002D62;
+	width: 9rem;
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: #002D62;
+	position: absolute;
+	bottom: 11.5rem;
+}
+
+#front-page-image {
+	position: relative;
+	bottom: 4rem;
+	right: 1rem;
 }
 
 .nav-button a:link, .nav-button, .nav-button a:visited {
