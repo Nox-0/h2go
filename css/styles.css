@@ -16,12 +16,19 @@ input:invalid {
 	box-shadow: none !important;
 }
 
+footer {
+	background-color: #002D62;
+	height: 6rem;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
 #nav-buttons {
 	width: auto;
-	background-color: red;
 	width: 60rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 #nav-bar {
@@ -49,6 +56,10 @@ input:invalid {
 	color: white;
 	background-color: #00a8ff;
 	border-radius: 0.2rem;
+	padding: 1rem 1rem 0.5rem 0.5rem;
+	margin-right: 3rem;
+	position: relative;
+	bottom: 2rem;
 }
 
 #blueBoxForm {
@@ -58,6 +69,8 @@ input:invalid {
 	width: 36rem;
 	padding: 1rem;
 	padding-bottom: 2.5rem;
+	height: 30rem;
+	align-items: center;
 }
 
 #white-box {
@@ -67,6 +80,14 @@ input:invalid {
 	width: 98%;
 	border: 3rem solid #e5e5e8;
 	padding: 5rem;
+}
+
+#white-box-signup {
+	display: flex;
+	justify-content: center;
+	background-color: white;
+	width: 98%;
+	border: 3rem solid #e5e5e8;
 }
 
 #white-box-holder {
@@ -99,6 +120,11 @@ input:invalid {
 	position: relative;
 	bottom: 4rem;
 	right: 1rem;
+}
+
+#blue-box-holder {
+	display: flex;
+	justify-content: center;
 }
 
 .nav-button a:link, .nav-button, .nav-button a:visited {
