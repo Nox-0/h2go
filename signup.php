@@ -11,9 +11,10 @@
 			<div id="nav-bar">
 				<a href="index.php"><img src="images/logo.png"  id="logo-image"/></a>
 				<ul id="nav-buttons">
-					<li class="nav-button"><strong><a href="shop.php">SHOP</a></li></strong>
-					<li class="nav-button" id="active"><strong><a href="signup.php">SIGN UP</a></li></strong>
-					<li class="nav-button"><strong><a href="login.php">LOG IN</a></li></strong>
+					<li class="nav-button"><strong><a href="index.php">HOME</a></strong></li>
+					<li class="nav-button"><strong><a href="shop.php">SHOP</a></strong></li>
+					<li class="nav-button"><strong><a href="signup.php">SIGN UP</a></strong></li>
+					<li class="nav-button"><strong><a href="login.php">LOG IN</a></strong></li>
 				</ul>
 				<div>
 					<strong><a href="cart.php" id="cart-button"><img src="images/cart.png" id="cart-image"/> CART</a></strong>
