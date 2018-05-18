@@ -4,6 +4,7 @@
 	<meta charset="UTF-8" />
 	<title>Registration</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<link rel="icon" href="images/favicon.png" />
 </head>
 <body>
 	<header>
@@ -25,7 +26,7 @@
 	<div id="white-box-holder">
 		<div id="white-box-signup">
 			<div id="blue-box-holder">
-				<div id="blueBoxForm">
+				<div id="blueBoxSignup">
 					<div class="formBox">
 						<div>
 							<h1>SIGN UP</h1>

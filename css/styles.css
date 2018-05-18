@@ -62,13 +62,12 @@ input:invalid {
 	bottom: 2rem;
 }
 
-#blueBoxForm {
+#blueBoxSignup {
 	display: flex;
 	justify-content: center;
 	background-color: #00a8ff;
 	width: 36rem;
 	padding: 1rem;
-	padding-bottom: 2.5rem;
 	height: 30rem;
 }
 
@@ -172,6 +171,7 @@ input:invalid {
 	height: 2.5rem;
 	display: flex;
 	justify-content: center;
+	padding: 1.5rem;
 }
 
 .textfield {
