@@ -1,10 +1,14 @@
+<?php
+session_start();
+include"conn.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8" />
 	<title>Registration</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
-	<link rel="icon" href="images/favicon.png" />
+	<link rel="icon" href="images/logo.png" />
 </head>
 <body>
 	<header>
@@ -30,7 +34,30 @@
 					<div class="formBox">
 						<div>
 							<h1>SIGN UP</h1>
-							<p class="error">Please re-enter your password.</p>
+							<p class="error">
+							<?php
+							if (isset($_POST['SignUp'])) {
+
+								//If sign up button pressed, assign data from fields to variables
+								$FName = $_POST['FirstName'];
+								$LName = $_POST['Surname'];
+								$Email = $_POST['Email'];
+								$Password = $_POST['Password'];
+								$Confirm = $_POST['ConfirmPassword'];
+
+								if ($Confirm == $Password) {
+									//Insert variables into members table
+									$sql = $conn->query("INSERT INTO members (firstName, lastName, email, password) Values('$FName','$LName','$Email','$Password')");
+
+									//Redirect user to login page
+									header('Location: login.php');
+								}
+								else {
+									echo "Your passwords do not match.";
+								}
+
+							}
+							?></p>
 						</div>
 						<form id="RegisterForm" name="RegisterForm" method="post" action="" enctype="multipart/form-data">
 							<div class="formelement"><input type="text" name="FirstName" required="required" class="textfield" id="FirstName" placeholder="First name"></div>

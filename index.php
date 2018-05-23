@@ -1,22 +1,42 @@
+<?php
+session_start();
+include"conn.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8" />
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
-	<link rel="icon" href="images/favicon.png" />
+	<link rel="icon" href="images/logo.png" />
 </head>
 <body>
 	<header>
 		<div id="nav-bar-container">
 			<div id="nav-bar">
 				<a href="index.php"><img src="images/logo.png"  id="logo-image"/></a>
-				<ul id="nav-buttons">
-					<li class="nav-button"><strong><a href="index.php">HOME</a></strong></li>
-					<li class="nav-button"><strong><a href="shop.php">SHOP</a></strong></li>
-					<li class="nav-button"><strong><a href="signup.php">SIGN UP</a></strong></li>
-					<li class="nav-button"><strong><a href="login.php">LOG IN</a></strong></li>
-				</ul>
+				<?php
+					if(isset($_SESSION["UserID"])){
+						?>
+						<ul id="nav-buttons">
+							<li class="nav-button"><strong><a href="index.php">HOME</a></strong></li>
+							<li class="nav-button"><strong><a href="shop.php">SHOP</a></strong></li>
+							<li class="nav-button"><strong><a href="update.php">UPDATE</a></strong></li>
+							<li class="nav-button"><strong><a href="logout.php">LOG OUT</a></strong></li>
+						</ul>
+						<?php
+					}
+					else{
+						?>
+					<ul id="nav-buttons">
+						<li class="nav-button"><strong><a href="index.php">HOME</a></strong></li>
+						<li class="nav-button"><strong><a href="shop.php">SHOP</a></strong></li>
+						<li class="nav-button"><strong><a href="signup.php">SIGN UP</a></strong></li>
+						<li class="nav-button"><strong><a href="login.php">LOG IN</a></strong></li>
+					</ul>
+						<?php
+					}
+					?>
 				<div>
 					<strong><a href="cart.php" id="cart-button"><img src="images/cart.png" id="cart-image"/> CART</a></strong>
 				</div>
