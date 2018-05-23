@@ -47,7 +47,7 @@ include"conn.php";
 				<div id="blueBoxSignup">
 					<div class="formBox">
 						<div>
-							<h1>Update profile</h1>
+							<h1>UPDATE PROFILE</h1>
 							<p class="error">
 							<?php
 							if(isset($_POST['Update'])){
