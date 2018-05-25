@@ -22,7 +22,7 @@ include"conn.php";
 							<li class="nav-button"><strong><a href="index.php">HOME</a></strong></li>
 							<li class="nav-button"><strong><a href="shop.php">SHOP</a></strong></li>
 							<li class="nav-button"><strong><a href="update.php">UPDATE</a></strong></li>
-							<li class="nav-button"><strong><a href="">LOG OUT</a></strong></li>
+							<li class="nav-button"><strong><a href="logout.php">LOG OUT</a></strong></li>
 						</ul>
 						<?php
 					}
