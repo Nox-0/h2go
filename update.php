@@ -9,7 +9,7 @@ include"conn.php";
 		header('Location: login.php');
 	}
 	$User = $_SESSION["UserID"];
-	$result = $conn->query("select * from members where userID='$User'");
+	$result = $conn->query("select * from users where userID='$User'");
 	$row = $result->fetch_array();
 	$_SESSION["FirstName"] = $row['firstName'];
 	$_SESSION["LastName"] = $row['lastName'];
@@ -60,7 +60,7 @@ include"conn.php";
 								$Confirm = $_POST['ConfirmPassword'];
 
 								if ($Confirm == $UpdatePassword){
-									$data = $conn->query("UPDATE members SET firstName = '$UpdateFirstName', lastName = '$UpdateLastName', eMail = '$UpdateEmail', password = '$UpdatePassword' where userID = $User");
+									$data = $conn->query("UPDATE users SET firstName = '$UpdateFirstName', lastName = '$UpdateLastName', eMail = '$UpdateEmail', password = '$UpdatePassword' where userID = $User");
 
 									if($data)
 									{
@@ -83,6 +83,7 @@ include"conn.php";
 							<div class="formelement"><input type="text" name="LastName" value="<?php echo $_SESSION["LastName"]; ?>" required="required" class="textfield" id="LastName" placeholder="Last Name"></div>
 							<div class="formelement"><input type="text" name="Email" value="<?php echo $_SESSION["Email"]; ?>" required="required" class="textfield" id="Email" placeholder="Email"></div>
 							<div class="formelement"><input type="text" name="Password" value="<?php echo $_SESSION["Password"]; ?>" required="required" class="textfield" id="Password" placeholder="Password"></div>
+							<div class="formelement"><input type="text" name="Address1" value="<?php echo $_SESSION["Address1"]; ?>" required=""><!-- TODO!!! Add address --></div>
 							<div class="formelement"><input type="text" name="ConfirmPassword" required="required" class="textfield" id="ConfirmPassword" placeholder="Confirm password"></div>
 							<div class="formelement"><input type="submit" name="Update" value="Update" class="submitButton" id="updateButton"></div>
 						</form>

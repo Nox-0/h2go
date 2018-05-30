@@ -39,7 +39,7 @@ include"conn.php";
 								if(isset($_POST['LogIn'])){
 									$LogInEmail = $_POST['Email'];
 									$LogInPassword = $_POST['Password'];
-									$result = $conn->query("select * from members where eMail='$LogInEmail' and password='$LogInPassword'");
+									$result = $conn->query("select * from users where eMail='$LogInEmail' and password='$LogInPassword'");
 									$row = $result->fetch_array();
 
 									$Email=$row['eMail'];

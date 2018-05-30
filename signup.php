@@ -46,8 +46,8 @@ include"conn.php";
 								$Confirm = $_POST['ConfirmPassword'];
 
 								if ($Confirm == $Password) {
-									//Insert variables into members table
-									$sql = $conn->query("INSERT INTO members (firstName, lastName, email, password) Values('$FName','$LName','$Email','$Password')");
+									//Insert variables into users table
+									$sql = $conn->query("INSERT INTO users (firstName, lastName, email, password) Values('$FName','$LName','$Email','$Password')");
 
 									//Redirect user to login page
 									header('Location: login.php');
