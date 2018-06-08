@@ -112,7 +112,7 @@ include"conn.php";
 				<div class="product-card">
 					<img src="images/flask-m.jpg" alt="A medium-sized flask filled with water" />
 					<div class="product-details">
-						<h5>Medium Jar of Water</h5>
+						<h5>Medium Flask of Water</h5>
 						<h6>Price: $4.99</h6>
 					</div>
 				</div>
