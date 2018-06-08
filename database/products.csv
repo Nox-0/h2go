@@ -1,0 +1,11 @@
+﻿productID,productName,productType,productSize,productDescription,productPrice,productInStock
+,Small Bottle of Water,Bottle,Small,A small-sized bottle filled with water,2.49,1
+,Medium Bottle of Water,Bottle,Medium,A medium-sized bottle filled with water,4.99,1
+,Large Bottle of Water,Bottle,Large,A large-sized bottle filled with water,14.99,1
+,Small Packet of Water,Packet,Small,A small-sized packet filled with water,0.49,1
+,Medium Packet of Water,Packet,Medium,A medium-sized packet filled with water,1.99,1
+,Small Jar of Water,Jar,Small,A small-sized jar filled with water,1.99,1
+,Medium Jar of Water,Jar,Medium,A medium-sized jar filled with water,4.99,1
+,Large Jar of Water,Jar,Large,A large-sized jar filled with water,19.99,1
+,Small Flask of Water,Flask,Small,A small-sized flask filled with water,3.99,1
+,Medium Flask of Water,Flask,Medium,A medium-sized flask filled with water,4.99,1
