@@ -24,14 +24,14 @@ input:invalid {
 	box-shadow: none !important;
 }
 
-#nav-buttons {
+#navButtons {
 	width: auto;
 	width: 60rem;
 	display: flex;
 	justify-content: space-around;
 }
 
-#nav-bar {
+#navBar {
 	padding: 0rem 1rem;
 	width: 100%;
 	height: 7.5rem;
@@ -41,17 +41,17 @@ input:invalid {
 	margin-bottom: 2rem;
 }
 
-#logo-image {
+#logoImage {
 	width: 15rem;
 	height: auto;
 }
 
-#cart-image {
+#cartImage {
 	width: 2rem;
 	height: auto;
 }
 
-#cart-button {
+#cartButton {
 	text-decoration: none;
 	color: white;
 	background-color: #00a8ff;
@@ -82,7 +82,7 @@ input:invalid {
 	flex: column;
 }
 
-#white-box {
+#whiteBox {
 	display: flex;
 	justify-content: center;
 	background-color: white;
@@ -93,7 +93,7 @@ input:invalid {
 	flex-flow: column;
 }
 
-#white-box-signup {
+#whiteBoxSignup {
 	display: flex;
 	justify-content: center;
 	background-color: white;
@@ -102,19 +102,19 @@ input:invalid {
 	padding: 1rem;
 }
 
-#white-box-holder {
+#whiteBoxHolder {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-#image-header {
+#imageHeader {
 	color: #002D62;
 	bottom: 19rem;
 	padding: 2rem;
 }
 
-#shop-now-button {
+#shopNowButton {
 	background-color: white;
 	border: 0.2rem solid #002D62;
 	width: 9rem;
@@ -127,13 +127,13 @@ input:invalid {
 	bottom: 14.5rem;
 }
 
-#front-page-image {
+#frontPageImage {
 	bottom: 4rem;
 	right: 1rem;
 	max-width: 20rem;
 }
 
-#blue-box-holder {
+#blueBoxHolder {
 	display: flex;
 	justify-content: center;
 }
@@ -146,7 +146,7 @@ input:invalid {
 	justify-content: center;
 }
 
-.nav-button a:link, .nav-button, .nav-button a:visited {
+.navButton a:link, .navButton, .navButton a:visited {
 	background-color: #00a8ff;
 	color: white;
 	list-style: none;
@@ -193,19 +193,19 @@ input:invalid {
 	border: transparent;
 }
 
-.product-card {
+.productCard {
 	margin: 0.625rem;
 	border: 0.063rem solid #28749b;
 	border-radius: 0.313rem;
 	box-shadow: 0.188rem 0.188rem 0.5rem rgba(0,0,0,0.3);
 }
 
-.product-card img {
+.productCard img {
 	border-radius: 0.313rem 0.313rem 0 0;
 	max-width: 14rem;
 }
 
-.product-details {
+.productDetails {
 	border-radius: 0 0 0.313rem 0.313rem;
 	color: white;
 	background-color: #28749b;

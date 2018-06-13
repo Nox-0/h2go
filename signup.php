@@ -2,7 +2,6 @@
 session_start();
 include"conn.php";
 ?>
-<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8" />
@@ -12,24 +11,24 @@ include"conn.php";
 </head>
 <body>
 	<header>
-		<div id="nav-bar-container">
-			<div id="nav-bar">
-				<a href="index.php"><img src="images/logo.png"  id="logo-image"/></a>
-				<ul id="nav-buttons">
-					<li class="nav-button"><strong><a href="index.php">HOME</a></strong></li>
-					<li class="nav-button"><strong><a href="shop.php">SHOP</a></strong></li>
-					<li class="nav-button"><strong><a href="signup.php">SIGN UP</a></strong></li>
-					<li class="nav-button"><strong><a href="login.php">LOG IN</a></strong></li>
+		<div id="navBarContainer">
+			<div id="navBar">
+				<a href="index.php"><img src="images/logo.png"  id="logoImage"/></a>
+				<ul id="navButtons">
+					<li class="navButton"><strong><a href="index.php">HOME</a></strong></li>
+					<li class="navButton"><strong><a href="shop.php">SHOP</a></strong></li>
+					<li class="navButton"><strong><a href="signup.php">SIGN UP</a></strong></li>
+					<li class="navButton"><strong><a href="login.php">LOG IN</a></strong></li>
 				</ul>
 				<div>
-					<strong><a href="cart.php" id="cart-button"><img src="images/cart.png" id="cart-image"/> CART</a></strong>
+					<strong><a href="cart.php" id="cartButton"><img src="images/cart.png" id="cartImage"/> CART</a></strong>
 				</div>
 			</div>
 		</div>
 	</header>
-	<div id="white-box-holder">
-		<div id="white-box-signup">
-			<div id="blue-box-holder">
+	<div id="whiteBoxHolder">
+		<div id="whiteBoxSignup">
+			<div id="blueBoxHolder">
 				<div id="blueBoxSignup">
 					<div class="formBox">
 						<div>
