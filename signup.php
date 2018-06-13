@@ -64,8 +64,8 @@ include"conn.php";
 							<div class="formelement"><input type="text" name="Surname" required="required" class="textfield" id="LastName" placeholder="Surname"></div>
 							<div class="formelement"><input type="text" name="Address" required="required" class="textfield" id="Address" placeholder="Address"></div>
 							<div class="formelement"><input type="text" name="Email" required="required" class="textfield" id="Email" placeholder="Email"></div>
-							<div class="formelement"><input type="text" name="Password" required="required" class="textfield" id="Password" placeholder="Password"></div>
-							<div class="formelement"><input type="text" name="ConfirmPassword" required="required" class="textfield" id="ConfirmPassword" placeholder="Confirm password"></div>
+							<div class="formelement"><input type="password" name="Password" required="required" class="textfield" id="Password" placeholder="Password"></div>
+							<div class="formelement"><input type="password" name="ConfirmPassword" required="required" class="textfield" id="ConfirmPassword" placeholder="Confirm password"></div>
 							<div class="formelement"><input type="submit" name="SignUp" value="Sign Up" class="submitButton" id="SignUpButton"></div>
 						</form>
 					</div>
