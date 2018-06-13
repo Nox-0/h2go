@@ -1,3 +1,7 @@
+<!--
+TODO:
+Add comments
+-->
 <?php
 $servername = "localhost";
 $username = "root";

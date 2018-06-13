@@ -1,7 +1,13 @@
+<!--
+TODO:
+Add comments
+Add "Add to cart" button
+-->
 <?php
 session_start();
 include"conn.php";
 ?>
+<!-- This starts the session and calls on conn.php which will then run it's code when it's called -->
 <html>
 <head>
 	<meta charset="UTF-8" />
@@ -15,27 +21,8 @@ include"conn.php";
 			<div id="navBar">
 				<a href="index.php"><img src="images/logo.png"  id="logoImage"/></a>
 				<?php
-					if(isset($_SESSION["UserID"])){
-						?>
-						<ul id="navButtons">
-							<li class="navButton"><strong><a href="index.php">HOME</a></strong></li>
-							<li class="navButton"><strong><a href="shop.php">SHOP</a></strong></li>
-							<li class="navButton"><strong><a href="update.php">UPDATE</a></strong></li>
-							<li class="navButton"><strong><a href="logout.php">LOG OUT</a></strong></li>
-						</ul>
-						<?php
-					}
-					else{
-						?>
-					<ul id="navButtons">
-						<li class="navButton"><strong><a href="index.php">HOME</a></strong></li>
-						<li class="navButton"><strong><a href="shop.php">SHOP</a></strong></li>
-						<li class="navButton"><strong><a href="signup.php">SIGN UP</a></strong></li>
-						<li class="navButton"><strong><a href="login.php">LOG IN</a></strong></li>
-					</ul>
-						<?php
-					}
-					?>
+				include"nav.php";
+				?>
 				<div>
 					<strong><a href="cart.php" id="cartButton"><img src="images/cart.png" id="cartImage"/> CART</a></strong>
 				</div>
