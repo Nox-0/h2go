@@ -13,6 +13,7 @@ include"conn.php";
 	$row = $result->fetch_array();
 	$_SESSION["FirstName"] = $row['firstName'];
 	$_SESSION["LastName"] = $row['lastName'];
+	$_SESSION["Address"] = $row['userAddress'];
 	$_SESSION["Email"] = $row['eMail'];
 	$_SESSION["Password"] = $row['password'];
 ?>
@@ -55,12 +56,13 @@ include"conn.php";
 								$id=$row['userID'];
 								$UpdateFirstName = $_POST['FirstName'];
 								$UpdateLastName = $_POST['LastName'];
+								$UpdateAddress = $_POST['Address'];
 								$UpdateEmail = $_POST['Email'];
 								$UpdatePassword = $_POST['Password'];
 								$Confirm = $_POST['ConfirmPassword'];
 
 								if ($Confirm == $UpdatePassword){
-									$data = $conn->query("UPDATE users SET firstName = '$UpdateFirstName', lastName = '$UpdateLastName', eMail = '$UpdateEmail', password = '$UpdatePassword' where userID = $User");
+									$data = $conn->query("UPDATE users SET firstName = '$UpdateFirstName', lastName = '$UpdateLastName', userAddress = '$UpdateAddress', eMail = '$UpdateEmail', password = '$UpdatePassword' where userID = $User");
 
 									if($data)
 									{
@@ -81,9 +83,9 @@ include"conn.php";
 						<form id="updateForm" name="updateForm" method="post" action="" enctype="multipart/form-data">
 							<div class="formelement"><input type="text" name="FirstName" value="<?php echo $_SESSION["FirstName"]; ?>" required="required" class="textfield" id="FirstName" placeholder="First Name"></div>
 							<div class="formelement"><input type="text" name="LastName" value="<?php echo $_SESSION["LastName"]; ?>" required="required" class="textfield" id="LastName" placeholder="Last Name"></div>
+							<div class="formelement"><input type="text" name="Address" value="<?php echo $_SESSION["Address"]; ?>" required="required" class="textfield" id="Address" placeholder="Address"></div>
 							<div class="formelement"><input type="text" name="Email" value="<?php echo $_SESSION["Email"]; ?>" required="required" class="textfield" id="Email" placeholder="Email"></div>
 							<div class="formelement"><input type="text" name="Password" value="<?php echo $_SESSION["Password"]; ?>" required="required" class="textfield" id="Password" placeholder="Password"></div>
-							<div class="formelement"><input type="text" name="Address1" value="<?php echo $_SESSION["Address1"]; ?>" required=""><!-- TODO!!! Add address --></div>
 							<div class="formelement"><input type="text" name="ConfirmPassword" required="required" class="textfield" id="ConfirmPassword" placeholder="Confirm password"></div>
 							<div class="formelement"><input type="submit" name="Update" value="Update" class="submitButton" id="updateButton"></div>
 						</form>
