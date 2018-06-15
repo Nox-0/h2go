@@ -1,6 +1,5 @@
 <!--
 TODO:
-Add comments
 Add "Add to cart" button
 -->
 <?php
@@ -31,7 +30,9 @@ include"conn.php";
 	</header>
 	<div id="whiteBoxHolder">
 		<div id="whiteBox">
+			<!-- Instead of using a div I use a main because it's the main part of the page. Wew! -->
 			<main id="products">
+				<!-- The product card contains all of the information of the product -->
 				<div class="productCard">
 					<img src="images/bottle-s.jpg" alt="A small-sized bottle filled with water" />
 					<div class="productDetails">
