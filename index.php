@@ -21,9 +21,6 @@ session_start();
 				include"nav.php";
 				?>
 				<!-- This calls upon the nav.php code -->
-				<div>
-					<strong><a href="cart.php" id="cartButton"><img src="images/cart.png" id="cartImage"/> CART</a></strong>
-				</div>
 			</div>
 		</div>
 	</header>

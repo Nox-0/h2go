@@ -12,12 +12,11 @@
 		<!-- You can update and logout -->
 		<?php
 	}
-	//If the user isn't logged in then it will show this nav bar
+	//If the user isn't logged in then it will show this nav bar. The user isn't allowed to access the shop before they login
 	else{
 		?>
 	<ul id="navButtons">
 		<li class="navButton"><strong><a href="index.php">HOME</a></strong></li>
-		<li class="navButton"><strong><a href="shop.php">SHOP</a></strong></li>
 		<li class="navButton"><strong><a href="signup.php">SIGN UP</a></strong></li>
 		<li class="navButton"><strong><a href="login.php">LOG IN</a></strong></li>
 	</ul>

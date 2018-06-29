@@ -1,7 +1,3 @@
-<!--
-TODO:
-Add comments
--->
 <?php
 //Defines variables. The "$" means that it's the variable name
 $servername = "localhost";

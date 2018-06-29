@@ -1,4 +1,4 @@
-<!-<?php
+<?php
 //This starts the session
 session_start();
 //This destroys the session, meaning that all of the data associated with this session is scrapped, thus logging you out

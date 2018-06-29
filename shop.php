@@ -5,6 +5,12 @@ Add "Add to cart" button
 <?php
 session_start();
 include"conn.php";
+
+if(isset($_SESSION["UserID"])){
+}
+else{
+	header('Location: login.php');
+}
 ?>
 <!-- This starts the session and calls on conn.php which will then run it's code when it's called -->
 <html>
@@ -22,9 +28,6 @@ include"conn.php";
 				<?php
 				include"nav.php";
 				?>
-				<div>
-					<strong><a href="cart.php" id="cartButton"><img src="images/cart.png" id="cartImage"/> CART</a></strong>
-				</div>
 			</div>
 		</div>
 	</header>

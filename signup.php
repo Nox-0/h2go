@@ -18,15 +18,9 @@ include"conn.php";
 		<div id="navBarContainer">
 			<div id="navBar">
 				<a href="index.php"><img src="images/logo.png"  id="logoImage"/></a>
-				<ul id="navButtons">
-					<li class="navButton"><strong><a href="index.php">HOME</a></strong></li>
-					<li class="navButton"><strong><a href="shop.php">SHOP</a></strong></li>
-					<li class="navButton"><strong><a href="signup.php">SIGN UP</a></strong></li>
-					<li class="navButton"><strong><a href="login.php">LOG IN</a></strong></li>
-				</ul>
-				<div>
-					<strong><a href="cart.php" id="cartButton"><img src="images/cart.png" id="cartImage"/> CART</a></strong>
-				</div>
+				<?php
+				include"nav.php";
+				?>
 			</div>
 		</div>
 	</header>
