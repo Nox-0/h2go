@@ -35,77 +35,41 @@ else{
 		<div id="whiteBox">
 			<!-- Instead of using a div I use a main because it's the main part of the page. Wew! -->
 			<main id="products">
-				<!-- The product card contains all of the information of the product -->
+				<?php
+				// PRODUCTS
+				// This selects everything from the products table and is ordered by the productID (in the database) in ascending order
+				$query = "SELECT * FROM products ORDER BY productID ASC";
+				$result = mysqli_query($conn, $query);
+				// If there is at least 1 product it goes to the while loop
+				if (mysqli_num_rows($result) > 0)
+				{
+					// Loops through each product
+					while ($row = mysqli_fetch_array($result))
+					{
+				?>
 				<div class="productCard">
-					<img src="images/bottle-s.jpg" alt="A small-sized bottle filled with water" />
+					<!-- the link to each image is stored in the database however, the images are stored locally to save space in the db -->
+        	<img src="images/<?php echo $row['images']; ?>" />
 					<div class="productDetails">
-						<h5>Small Bottle of Water</h5>
-						<h6>Price: $2.49</h6>
+						<!-- The PHP returns the product details from the products table -->
+            <h5><?php echo $row['productName']; ?></h5>
+            <h6>Price: $<?php echo $row['productPrice']; ?></h6>
+						<div class="productFunctions">
+							<!-- The input type dictates what the user can input/submit
+						 	Number type allows the user to submit numbers and hidden type hides the input, not allowing the user to submit anything
+							Min dictates the minimum amount that the user can select
+							Value dictates the value that is shown in the input box by default -->
+	            <input class="productQuantity" type="number" name="quantity" min=1 value=1 />
+	            <input type="hidden" name="hiddenName" value="<?php echo $row['productName']; ?>" />
+	            <input type="hidden" name="hiddenPrice" value="<?php echo $row['productPrice']; ?>" />
+	            <input class="addToCart" type="submit" name="addToCart" value="Add to Cart" />
+						</div>
 					</div>
 				</div>
-				<div class="productCard">
-					<img src="images/bottle-m.jpg" alt="A medium-sized bottle filled with water" />
-					<div class="productDetails">
-						<h5>Medium Bottle of Water</h5>
-						<h6>Price: $4.99</h6>
-					</div>
-				</div>
-				<div class="productCard">
-					<img src="images/bottle-l.jpg" alt="A large-sized bottle filled with water" />
-					<div class="productDetails">
-						<h5>Large Bottle of Water</h5>
-						<h6>Price: $14.99</h6>
-					</div>
-				</div>
-				<div class="productCard">
-					<img src="images/packet-s.jpg" alt="A small-sized packet filled with water" />
-					<div class="productDetails">
-						<h5>Small Packet of Water</h5>
-						<h6>Price: $0.49</h6>
-					</div>
-				</div>
-				<div class="productCard">
-					<img src="images/packet-m.jpg" alt="A medium-sized packet filled with water" />
-					<div class="productDetails">
-						<h5>Medium Packet of Water</h5>
-						<h6>Price: $1.99</h6>
-					</div>
-				</div>
-				<div class="productCard">
-					<img src="images/jar-s.jpg" alt="A small-sized jar filled with water" />
-					<div class="productDetails">
-						<h5>Small Jar of Water</h5>
-						<h6>Price: $1.99</h6>
-					</div>
-				</div>
-				<div class="productCard">
-					<img src="images/jar-m.jpg" alt="A medium-sized jar filled with water" />
-					<div class="productDetails">
-						<h5>Medium Jar of Water</h5>
-						<h6>Price: $4.99</h6>
-					</div>
-				</div>
-				<div class="productCard">
-					<img src="images/jar-l.jpg" alt="A large-sized jar filled with water" />
-					<div class="productDetails">
-						<h5>Large Jar of Water</h5>
-						<h6>Price: $19.99</h6>
-					</div>
-				</div>
-				<div class="productCard">
-					<img src="images/flask-s.jpg" alt="A small-sized flask filled with water" />
-					<div class="productDetails">
-						<h5>Small Flask of Water</h5>
-						<h6>Price: $3.99</h6>
-					</div>
-				</div>
-				<div class="productCard">
-					<img src="images/flask-m.jpg" alt="A medium-sized flask filled with water" />
-					<div class="productDetails">
-						<h5>Medium Flask of Water</h5>
-						<h6>Price: $4.99</h6>
-					</div>
-				</div>
+				<?php
+				}
+				}
+				?>
 			</main>
 		</div>
 	</div>
