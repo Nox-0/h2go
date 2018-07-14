@@ -200,16 +200,31 @@ input:invalid {
 }
 
 .productQuantity {
-	width: 25%;
+	width: 65%;
 	text-align: center;
+	padding: 0.1rem;
+	border-radius: 0.5rem;
+	border-style: none;
 }
 
 .addToCart {
 	text-align: center;
+	background-color: white;
+	border-style: none;
+	padding: 0.3rem;
+	color: #28749b;
+	border-radius: 1.5rem;
+	font-weight: bolder;
+	width: 1.75rem;
 }
 
-.productFunctions {
+.cartLineTwo {
 	display: flex;
-	align-self: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.productPrice {
 	width: 100%;
 }
