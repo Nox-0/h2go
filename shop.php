@@ -7,36 +7,39 @@ Add "WELCOME user's name"
 session_start();
 include "conn.php";
 
-if(isset($_SESSION["UserID"])){
-}
-else{
-	header('Location: login.php');
-}
 if(isset($_POST["addToCart"])) {
-	if(isset($_SESSION['cart'])) {
-		$itemarrayid = array_column($_SESSION["cart"], "itemID");
-		if(!in_array($_GET["id"], $itemarrayid)) {
-			$count = count($_SESSION["cart"]);
+	if(isset($_SESSION['UserID'])) {
+		if(isset($_SESSION['cart'])) {
+			$itemarrayid = array_column($_SESSION["cart"], "itemID");
+			if(!in_array($_GET["id"], $itemarrayid)) {
+				$count = count($_SESSION["cart"]);
+				$itemarray = array(
+					'itemID' => $_GET["id"],
+					'itemName' => $_POST["hiddenName"],
+					'itemPrice' => $_POST["hiddenPrice"],
+					'itemQuantity' => $_POST["quantity"],
+					'itemImage' => $_POST["hiddenImage"]
+				);
+				$_SESSION["cart"][$count] = $itemarray;
+				echo '<script>alert("Item added to cart")</script>';
+			}
+			else {
+				echo '<script>alert("Item already added")</script>';
+			}
+		}
+		else {
 			$itemarray = array(
 				'itemID' => $_GET["id"],
 				'itemName' => $_POST["hiddenName"],
 				'itemPrice' => $_POST["hiddenPrice"],
-				'itemQuantity' => $_POST["quantity"]
+				'itemQuantity' => $_POST["quantity"],
+				'itemImage' => $_POST["hiddenImage"]
 			);
-			$_SESSION["cart"][$count] = $itemarray;
-		}
-		else {
-			echo '<script>alert("Item Already Added")</script>';
+			$_SESSION['cart'][0] = $itemarray;
 		}
 	}
 	else {
-		$itemarray = array(
-			'itemID' => $_GET["id"],
-			'itemName' => $_POST["hiddenName"],
-			'itemPrice' => $_POST["hiddenPrice"],
-			'itemQuantity' => $_POST["quantity"]
-		);
-		$_SESSION['cart'][0] = $itemarray;
+		echo '<script>alert("Log in to add to cart")</script>';
 	}
 }
 ?>
@@ -50,14 +53,9 @@ if(isset($_POST["addToCart"])) {
 </head>
 <body>
 	<header>
-		<div id="navBarContainer">
-			<div id="navBar">
-				<a href="index.php"><img src="images/logo.png"  id="logoImage"/></a>
-				<?php
-				include"nav.php";
-				?>
-			</div>
-		</div>
+		<?php
+		include"nav.php";
+		?>
 	</header>
 	<div id="whiteBoxHolder">
 		<div id="whiteBox">
@@ -88,10 +86,11 @@ if(isset($_POST["addToCart"])) {
 							 	Number type allows the user to submit numbers and hidden type hides the input, not allowing the user to submit anything
 								Min dictates the minimum amount that the user can select
 								Value dictates the value that is shown in the input box by default -->
-		            <input class="productQuantity" type="number" name="quantity" min=1 value=1 />
+		            <input class="productQuantity" type="number" name="quantity" min=1 max=1000 value=1 />
 		            <input class="addToCart" type="submit" name="addToCart" value="+" />
 		            <input type="hidden" name="hiddenName" value="<?php echo $row['productName']; ?>" />
 		            <input type="hidden" name="hiddenPrice" value="<?php echo $row['productPrice']; ?>" />
+								<input type="hidden" name="hiddenImage" value="<?php echo $row['images']; ?>" />
 							</div>
 						</div>
 					</div>
@@ -100,50 +99,6 @@ if(isset($_POST["addToCart"])) {
 				}
 				}
 				?>
-				<h3>Order Details</h3>
-	      <div>
-	        <table>
-	          <tr>
-	            <th width="40%">Item Name</th>
-	            <th width="10%">Quantity</th>
-	            <th width="20%">Price</th>
-	            <th width="15%">Total</th>
-	            <th width="5%">Action</th>
-	          </tr>
-	<?php
-	// is the shopping cart is NOT empty
-	if (!empty($_SESSION['cart']))
-	{
-	  $total = 0;
-	  // go through each item in the cart
-	  // - retrieve both the item's attribute and the data for that attribute
-	  foreach($_SESSION['cart'] as $keys => $values)
-	  {
-	?>
-	          <!-- add 1 item to the table as a new row -->
-	          <tr>
-	            <td><?php echo $values['itemName']; ?></td>
-	            <td><?php echo $values['itemQuantity']; ?></td>
-	            <td>$ <?php echo $values['itemPrice']; ?></td>
-	            <td>$ <?php echo number_format($values['itemQuantity'] * $values['itemPrice'], 2); ?></td>
-	            <td><a href="shop.php?action=delete&id=<?php echo $values['itemID']; ?>">
-	            <span class="text-danger">Remove</span></a></td>
-	          </tr>
-	          <?php $total = $total + ($values['itemQuantity'] * $values['itemPrice']);
-	  } // end of foreach
-	?>
-	          <!-- total as a final row in the table -->
-	          <tr>
-	            <td colspan="3" align="right">Total</td>
-	            <td align="right">$ <?php echo number_format($total, 2); ?></td>
-	            <td></td>
-	          </tr>
-	          <?php
-	}
-	?>
-
-	        </table>
-	      </div>
 			</main>
 		</div>
 	</div>

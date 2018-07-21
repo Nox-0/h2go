@@ -4,7 +4,7 @@ Add comments
 -->
 <?php
 session_start();
-include"conn.php";
+include "conn.php";
 ?>
 <html>
 <head>
@@ -15,14 +15,9 @@ include"conn.php";
 </head>
 <body>
 	<header>
-		<div id="navBarContainer">
-			<div id="navBar">
-				<a href="index.php"><img src="images/logo.png"  id="logoImage"/></a>
-				<?php
-				include"nav.php";
-				?>
-			</div>
-		</div>
+		<?php
+		include"nav.php";
+		?>
 	</header>
 	<div id="whiteBoxHolder">
 		<div id="whiteBoxSignup">

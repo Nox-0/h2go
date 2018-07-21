@@ -12,17 +12,10 @@ session_start();
 </head>
 <body>
 	<header>
-		<div id="navBarContainer">
-		<!-- This is just a container for the navBar. It helps with formatting the nav bar. IMPORTANT! Many containers may not be in use, however, they are there just in case they need to be used in the future. It makes life easier for the future -->
-			<div id="navBar">
-			<!-- This is a container for everything in the nav bar. Also help with formatting via CSS -->
-				<a href="index.php"><img src="images/logo.png" id="logoImage"/></a>
-				<?php
-				include"nav.php";
-				?>
-				<!-- This calls upon the nav.php code -->
-			</div>
-		</div>
+		<?php
+		include"nav.php";
+		?>
+		<!-- This calls upon the nav.php code -->
 	</header>
 	<div id="whiteBoxHolder">
 	<!-- container that helps with formatting the whiteBox -->
