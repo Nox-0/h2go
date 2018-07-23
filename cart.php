@@ -49,8 +49,6 @@ if(isset($_GET["action"]))
 					$total = 0;
 					foreach($_SESSION["cart"] as $keys => $values)
 					{
-				$query = "SELECT * FROM products ORDER BY productID ASC";
-				$result = mysqli_query($conn, $query);
 				?>
 				<tr>
 					<td><a class="removeItem" href="cart.php?action=delete&id=<?php echo $values["itemID"]; ?>"><span>×</span></a></td>
@@ -67,8 +65,8 @@ if(isset($_GET["action"]))
 			}
 		?>
 		<div id="belowCart">
-			<div>Total: $<?php echo number_format($total, 2); ?></div>
-			<div>ORDER</div>
+			<div id="itemTotal">Total: $<?php echo number_format($total, 2); ?></div>
+			<div id="itemOrder">ORDER</div>
 		</div>
 		<?php
 		}
