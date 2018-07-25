@@ -58,12 +58,12 @@ if(isset($_GET["action"]))
 					<td>$<?php echo $values["itemPrice"]; ?></td>
 					<td>$<?php echo number_format($values["itemQuantity"] * $values["itemPrice"], 2);?></td>
 				</tr>
+				<?php
+					$total = $total + ($values["itemQuantity"] * $values["itemPrice"]);
+				}
+				?>
 			</table>
 		</div>
-		<?php
-				$total = $total + ($values["itemQuantity"] * $values["itemPrice"]);
-			}
-		?>
 		<div id="belowCart">
 			<div id="itemTotal">Total: $<?php echo number_format($total, 2); ?></div>
 			<div id="itemOrder">ORDER</div>

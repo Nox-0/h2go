@@ -36,6 +36,7 @@ if(isset($_POST["addToCart"])) {
 				'itemImage' => $_POST["hiddenImage"]
 			);
 			$_SESSION['cart'][0] = $itemarray;
+			echo '<script>alert("Item added to cart")</script>';
 		}
 	}
 	else {
