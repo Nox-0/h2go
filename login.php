@@ -9,14 +9,14 @@ include "conn.php";
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<title>Registration</title>
+	<title>Log in</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<link rel="icon" href="images/logo.png" />
 </head>
 <body>
 	<header>
 		<?php
-		include"nav.php";
+		include "nav.php";
 		?>
 	</header>
 	<div id="whiteBoxHolder">
@@ -39,6 +39,7 @@ include "conn.php";
 									$id=$row['userID'];
 
 									$_SESSION['UserID'] = $row['userID'];
+									$_SESSION['FirstName'] = $row['firstName'];
 
 									if($LogInEmail==$Email && $LogInPassword==$Password)
 									{

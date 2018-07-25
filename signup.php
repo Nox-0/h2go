@@ -16,7 +16,7 @@ include "conn.php";
 <body>
 	<header>
 		<?php
-		include"nav.php";
+		include "nav.php";
 		?>
 	</header>
 	<div id="whiteBoxHolder">

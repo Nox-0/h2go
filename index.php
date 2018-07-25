@@ -13,7 +13,7 @@ session_start();
 <body>
 	<header>
 		<?php
-		include"nav.php";
+		include "nav.php";
 		?>
 		<!-- This calls upon the nav.php code -->
 	</header>

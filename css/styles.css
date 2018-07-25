@@ -11,6 +11,11 @@ h1 {
 	text-align: center;
 }
 
+h4 {
+	color: #002D62;
+	font-size: 2.5rem;
+}
+
 h5 {
 	font-size: 1rem;
 }
@@ -207,6 +212,7 @@ td {
 #itemOrder {
 	margin-left: 0.5rem;
 	background-color: #28749b;
+	text-decoration: none;
 }
 
 #itemOrder:hover {
@@ -284,7 +290,7 @@ td {
 }
 
 .productQuantity {
-	width: 65%;
+	width: 3rem;
 	text-align: center;
 	padding: 0.1rem;
 	border-radius: 0.5rem;
@@ -300,6 +306,7 @@ td {
 	border-radius: 1.5rem;
 	font-weight: bolder;
 	width: 1.75rem;
+	margin-left: 0.5rem;
 }
 
 .cartLineTwo {
@@ -335,4 +342,9 @@ td {
 
 .total {
 	text-align: right;
+}
+
+.productFunctions {
+	display: flex;
+	flex-flow: row;
 }

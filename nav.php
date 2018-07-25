@@ -8,6 +8,8 @@
 			<div id="navBar">
 			<!-- This is a container for everything in the nav bar. Also help with formatting via CSS -->
 				<a href="index.php"><img src="images/logo.png" id="logoImage"/></a>
+				<!-- Welcomes the user -->
+				<h4>Welcome, <?php echo $_SESSION["FirstName"];?>!</h4>
 				<!-- I use lists because they are very easy to format for a navigation bar, especially using flex -->
 				<ul id="navButtons">
 					<li class="navButton"><strong><a href="index.php">HOME</a></strong></li>

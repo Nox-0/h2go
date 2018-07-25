@@ -1,18 +1,20 @@
-<!--
-TODO:
-Add "Add to cart" button
-Add "WELCOME user's name"
--->
 <?php
 session_start();
 include "conn.php";
 
+// If the user adds to cart
 if(isset($_POST["addToCart"])) {
+	// This checks whether the user is logged in or not. If they are, then it proceeds with the rest of the if statement(s)
 	if(isset($_SESSION['UserID'])) {
+		// If there are already items in the cart
 		if(isset($_SESSION['cart'])) {
+			// Takes itemIDs from the cart session
 			$itemarrayid = array_column($_SESSION["cart"], "itemID");
+			// If the itemID isn't in the array (hasn't been added to cart)
 			if(!in_array($_GET["id"], $itemarrayid)) {
+				// Counts all of the elements in the cart (all of the products)
 				$count = count($_SESSION["cart"]);
+				// Makes a new array for the new item and posts it
 				$itemarray = array(
 					'itemID' => $_GET["id"],
 					'itemName' => $_POST["hiddenName"],
@@ -21,13 +23,16 @@ if(isset($_POST["addToCart"])) {
 					'itemImage' => $_POST["hiddenImage"]
 				);
 				$_SESSION["cart"][$count] = $itemarray;
+				// Notifies the user that the item has been added
 				echo '<script>alert("Item added to cart")</script>';
 			}
 			else {
 				echo '<script>alert("Item already added")</script>';
 			}
 		}
+		// If there are no items in the cart
 		else {
+			// An array is created that posts variables to the cart session
 			$itemarray = array(
 				'itemID' => $_GET["id"],
 				'itemName' => $_POST["hiddenName"],
@@ -35,10 +40,12 @@ if(isset($_POST["addToCart"])) {
 				'itemQuantity' => $_POST["quantity"],
 				'itemImage' => $_POST["hiddenImage"]
 			);
+			// Starts the cart
 			$_SESSION['cart'][0] = $itemarray;
 			echo '<script>alert("Item added to cart")</script>';
 		}
 	}
+	// If the user isn't logged in they are prompted to log in to add to cart
 	else {
 		echo '<script>alert("Log in to add to cart")</script>';
 	}
@@ -55,7 +62,7 @@ if(isset($_POST["addToCart"])) {
 <body>
 	<header>
 		<?php
-		include"nav.php";
+		include "nav.php";
 		?>
 	</header>
 	<div id="whiteBoxHolder">
