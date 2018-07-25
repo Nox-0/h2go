@@ -1,3 +1,7 @@
+<!--
+TODO:
+Add alt-tags to images
+-->
 <?php
 session_start();
 include "conn.php";

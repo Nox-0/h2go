@@ -1,7 +1,3 @@
-<!--
-TODO:
-Add comments
--->
 <?php
 session_start();
 include "conn.php";
@@ -30,7 +26,7 @@ include "conn.php";
 							<?php
 							if (isset($_POST['SignUp'])) {
 
-								//If sign up button pressed, assign data from fields to variables
+								// If sign up button pressed, assign data from fields to variables
 								$FName = $_POST['FirstName'];
 								$LName = $_POST['Surname'];
 								$Address = $_POST['Address'];
@@ -39,10 +35,10 @@ include "conn.php";
 								$Confirm = $_POST['ConfirmPassword'];
 
 								if ($Confirm == $Password) {
-									//Insert variables into users table
+									// Insert variables into users table
 									$sql = $conn->query("INSERT INTO users (firstName, lastName, userAddress, email, password) Values('$FName','$LName','$Address','$Email','$Password')");
 
-									//Redirect user to login page
+									// Redirect user to login page
 									header('Location: login.php');
 								}
 								else {
@@ -52,6 +48,7 @@ include "conn.php";
 							}
 							?></p>
 						</div>
+						<!-- The form is explained in the update page -->
 						<form id="RegisterForm" name="RegisterForm" method="post" action="" enctype="multipart/form-data">
 							<div class="formelement"><input type="text" name="FirstName" required="required" class="textfield" id="FirstName" placeholder="First name"></div>
 							<div class="formelement"><input type="text" name="Surname" required="required" class="textfield" id="LastName" placeholder="Surname"></div>

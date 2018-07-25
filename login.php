@@ -1,7 +1,3 @@
-<!--
-TODO:
-Add comments
--->
 <?php
 session_start();
 include "conn.php";
@@ -28,31 +24,40 @@ include "conn.php";
 							<h1>LOG IN</h1>
 							<p class="error">
 								<?php
+								// If the user presses log in
 								if(isset($_POST['LogIn'])){
+									// Assigns the data entered to variables
 									$LogInEmail = $_POST['Email'];
 									$LogInPassword = $_POST['Password'];
+									// Finds the email and password of the user
 									$result = $conn->query("select * from users where eMail='$LogInEmail' and password='$LogInPassword'");
 									$row = $result->fetch_array();
 
+									// Assigns variables to the user's correct email, password and id
 									$Email=$row['eMail'];
 									$Password=$row['password'];
 									$id=$row['userID'];
 
+									// Starts a session for the user's ID and name. The name session is for the WELCOME USER and the id session is so that they are logged in as themselves
 									$_SESSION['UserID'] = $row['userID'];
 									$_SESSION['FirstName'] = $row['firstName'];
 
+									// If the email and password entered match the recorded email and password the user is logged in
 									if($LogInEmail==$Email && $LogInPassword==$Password)
 									{
+										// User is redirected to shop.php but logged in
 								?>
 									<script>window.location ="shop.php?id=<?php echo $id;?>";</script>
 								<?php
 									}
+									// If the email or password are incorrect
 									else{
 										echo "Invalid login.";
 									}
 								}
 								?></p>
 						</div>
+						<!-- Explained on the update page -->
 						<form id="LoginForm" name="LoginForm" method="post" action="">
 							<div class="formelement"><input type="text" name="Email" required="required" class="textfield" id="Email" placeholder="Email"></div>
 							<div class="formelement"><input type="password" name="Password" required="required" class="textfield" id="Password" placeholder="Password"></div>

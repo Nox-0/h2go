@@ -18,6 +18,7 @@ if(isset($_GET["action"]))
 		{
 			if($values["itemID"] == $_GET["id"])
 			{
+				// Empties the variable / deletes it
 				unset($_SESSION["cart"][$keys]);
 				header('Location: cart.php');
 			}
@@ -27,6 +28,7 @@ if(isset($_GET["action"]))
 ?>
 <html>
 <head>
+	<title>Cart</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<link rel="icon" href="images/logo.png" />
 </head>
