@@ -1,7 +1,3 @@
-<!--
-TODO:
-Add alt-tags to images
--->
 <?php
 session_start();
 include "conn.php";
@@ -87,7 +83,7 @@ if(isset($_POST["addToCart"])) {
 				?>
 				<form class="productCard" method="post" action="shop.php?action=add&id=<?php echo $row['productID']; ?>">
 					<!-- the link to each image is stored in the database however, the images are stored locally to save space in the db -->
-        	<img src="images/<?php echo $row['images']; ?>" />
+        	<img src="images/<?php echo $row['images']; ?>" alt="<?php echo $row['productName'] ?>" />
 					<div class="productDetails">
 						<!-- The PHP returns the product details from the products table -->
             <h5><?php echo $row['productName']; ?></h5>

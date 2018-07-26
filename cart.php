@@ -64,7 +64,7 @@ if(isset($_GET["action"]))
 					<!-- This removes the item by linking to the delete action of the item -->
 					<td><a class="removeItem" href="cart.php?action=delete&id=<?php echo $values["itemID"]; ?>"><span>×</span></a></td>
 					<!-- Displays the item's image -->
-					<td><img class="cartItemImage" src="images/<?php echo $values["itemImage"]; ?>" /></td>
+					<td><img class="cartItemImage" src="images/<?php echo $values["itemImage"]; ?>" alt="<?php echo $values["itemName"] ?>" /></td>
 					<!-- Displays the item's name -->
 					<td><?php echo $values["itemName"]; ?></td>
 					<!-- This should be self-explanatory after the previous comment. Displays the quantity -->

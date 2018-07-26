@@ -7,7 +7,7 @@
 		<!-- This is just a container for the navBar. It helps with formatting the nav bar. IMPORTANT! Many containers may not be in use, however, they are there just in case they need to be used in the future. It makes life easier for the future -->
 			<div id="navBar">
 			<!-- This is a container for everything in the nav bar. Also help with formatting via CSS -->
-				<a href="index.php"><img src="images/logo.png" id="logoImage"/></a>
+				<a href="index.php"><img src="images/logo.png" id="logoImage" alt="H2GO logo" /></a>
 				<!-- Welcomes the user -->
 				<h4>Welcome, <?php echo $_SESSION["FirstName"];?>!</h4>
 				<!-- I use lists because they are very easy to format for a navigation bar, especially using flex -->
