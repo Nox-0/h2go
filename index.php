@@ -2,6 +2,7 @@
 session_start();
 ?>
 <!-- This starts the session, allowing other PHP code to work as far as I'm aware. I later call upon nav.php using php and it doesn't work without session_start, which is what makes me think that session_start is needed for PHP code to run -->
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8" />

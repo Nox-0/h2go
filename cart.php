@@ -26,8 +26,10 @@ if(isset($_GET["action"]))
 	}
 }
 ?>
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8" />
 	<title>Cart</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<link rel="icon" href="images/logo.png" />

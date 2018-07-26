@@ -52,6 +52,7 @@ if(isset($_POST["addToCart"])) {
 }
 ?>
 <!-- This starts the session and calls on conn.php which will then run it's code when it's called -->
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8" />

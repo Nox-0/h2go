@@ -1,24 +1,24 @@
 <?php
 session_start();
 include "conn.php";
+
+if(isset($_SESSION["UserID"])){
+}
+else{
+	header('Location: login.php');
+}
+$User = $_SESSION["UserID"];
+// Selects everything from the logged in user
+$result = $conn->query("select * from users where userID='$User'");
+$row = $result->fetch_array();
+// Assigns these variables to the rows in the database
+$_SESSION["FirstName"] = $row['firstName'];
+$_SESSION["LastName"] = $row['lastName'];
+$_SESSION["Address"] = $row['userAddress'];
+$_SESSION["Email"] = $row['eMail'];
+$_SESSION["Password"] = $row['password'];
 ?>
-<?php
-	if(isset($_SESSION["UserID"])){
-	}
-	else{
-		header('Location: login.php');
-	}
-	$User = $_SESSION["UserID"];
-	// Selects everything from the logged in user
-	$result = $conn->query("select * from users where userID='$User'");
-	$row = $result->fetch_array();
-	// Assigns these variables to the rows in the database
-	$_SESSION["FirstName"] = $row['firstName'];
-	$_SESSION["LastName"] = $row['lastName'];
-	$_SESSION["Address"] = $row['userAddress'];
-	$_SESSION["Email"] = $row['eMail'];
-	$_SESSION["Password"] = $row['password'];
-?>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8" />

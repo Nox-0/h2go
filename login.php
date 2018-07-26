@@ -1,7 +1,12 @@
 <?php
 session_start();
 include "conn.php";
+
+if(isset($_SESSION["UserID"])){
+	header('Location: index.php');
+}
 ?>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8" />
