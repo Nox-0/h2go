@@ -64,8 +64,8 @@ if(isset($_SESSION["UserID"])){
 						</div>
 						<!-- Explained on the update page -->
 						<form id="LoginForm" name="LoginForm" method="post" action="">
-							<div class="formelement"><input type="text" name="Email" required="required" class="textfield" id="Email" placeholder="Email"></div>
-							<div class="formelement"><input type="password" name="Password" required="required" class="textfield" id="Password" placeholder="Password"></div>
+							<div class="formelement"><input type="text" name="Email" required="required" class="textfield" id="Email" placeholder="Email" maxlength="255"></div>
+							<div class="formelement"><input type="password" name="Password" required="required" class="textfield" id="Password" placeholder="Password" maxlength="255"></div>
 							<div class="formelement"><input type="submit" name="LogIn" class="submitButton" id="LogIn" value="Log In"></div>
 						</form>
 					</div>

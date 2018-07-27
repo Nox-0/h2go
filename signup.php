@@ -55,12 +55,12 @@ if(isset($_SESSION["UserID"])){
 						</div>
 						<!-- The form is explained in the update page -->
 						<form id="RegisterForm" name="RegisterForm" method="post" action="" enctype="multipart/form-data">
-							<div class="formelement"><input type="text" name="FirstName" required="required" class="textfield" id="FirstName" placeholder="First name"></div>
-							<div class="formelement"><input type="text" name="Surname" required="required" class="textfield" id="LastName" placeholder="Surname"></div>
-							<div class="formelement"><input type="text" name="Address" required="required" class="textfield" id="Address" placeholder="Address"></div>
-							<div class="formelement"><input type="email" name="Email" required="required" class="textfield" id="Email" placeholder="Email"></div>
-							<div class="formelement"><input type="password" name="Password" required="required" class="textfield" id="Password" placeholder="Password"></div>
-							<div class="formelement"><input type="password" name="ConfirmPassword" required="required" class="textfield" id="ConfirmPassword" placeholder="Confirm password"></div>
+							<div class="formelement"><input type="text" name="FirstName" required="required" class="textfield" id="FirstName" placeholder="First name" maxlength="255"></div>
+							<div class="formelement"><input type="text" name="Surname" required="required" class="textfield" id="LastName" placeholder="Surname" maxlength="255"></div>
+							<div class="formelement"><input type="text" name="Address" required="required" class="textfield" id="Address" placeholder="Address" maxlength="500"></div>
+							<div class="formelement"><input type="email" name="Email" required="required" class="textfield" id="Email" placeholder="Email" maxlength="255"></div>
+							<div class="formelement"><input type="password" name="Password" required="required" class="textfield" id="Password" placeholder="Password" maxlength="255"></div>
+							<div class="formelement"><input type="password" name="ConfirmPassword" required="required" class="textfield" id="ConfirmPassword" placeholder="Confirm password" maxlength="255"></div>
 							<div class="formelement"><input type="submit" name="SignUp" value="Sign Up" class="submitButton" id="SignUpButton"></div>
 						</form>
 					</div>

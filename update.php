@@ -77,14 +77,14 @@ $_SESSION["Password"] = $row['password'];
 						<!-- This is the actual form that the user fills out -->
 						<form id="updateForm" name="updateForm" method="post" enctype="multipart/form-data">
 							<!-- The value is what is currently in the form. For the FirstName field it will already have the user's first name entered. They can delete/change this -->
-							<div class="formelement"><input type="text" name="FirstName" value="<?php echo $_SESSION["FirstName"]; ?>" required="required" class="textfield" id="FirstName" placeholder="First Name"></div>
-							<div class="formelement"><input type="text" name="LastName" value="<?php echo $_SESSION["LastName"]; ?>" required="required" class="textfield" id="LastName" placeholder="Last Name"></div>
-							<div class="formelement"><input type="text" name="Address" value="<?php echo $_SESSION["Address"]; ?>" required="required" class="textfield" id="Address" placeholder="Address"></div>
-							<!-- The type is not text for this and makes the user have the "@email.com" attatched to the end -->
-							<div class="formelement"><input type="email" name="Email" value="<?php echo $_SESSION["Email"]; ?>" required="required" class="textfield" id="Email" placeholder="Email"></div>
+							<div class="formelement"><input type="text" name="FirstName" value="<?php echo $_SESSION["FirstName"]; ?>" required="required" class="textfield" id="FirstName" placeholder="First Name" maxlength="255"></div>
+							<div class="formelement"><input type="text" name="LastName" value="<?php echo $_SESSION["LastName"]; ?>" required="required" class="textfield" id="LastName" placeholder="Last Name" maxlength="255"></div>
+							<div class="formelement"><input type="text" name="Address" value="<?php echo $_SESSION["Address"]; ?>" required="required" class="textfield" id="Address" placeholder="Address" maxlength="500"></div>
+							<!-- The type is not text for this and makes the user have the "@EMAIL" attatched to the end -->
+							<div class="formelement"><input type="email" name="Email" value="<?php echo $_SESSION["Email"]; ?>" required="required" class="textfield" id="Email" placeholder="Email" maxlength="255"></div>
 							<!-- The password type shows asteriskes instead of the password's characters -->
-							<div class="formelement"><input type="password" name="Password" value="<?php echo $_SESSION["Password"]; ?>" required="required" class="textfield" id="Password" placeholder="Password"></div>
-							<div class="formelement"><input type="password" name="ConfirmPassword" required="required" class="textfield" id="ConfirmPassword" placeholder="Confirm password"></div>
+							<div class="formelement"><input type="password" name="Password" value="<?php echo $_SESSION["Password"]; ?>" required="required" class="textfield" id="Password" placeholder="Password" maxlength="255"></div>
+							<div class="formelement"><input type="password" name="ConfirmPassword" required="required" class="textfield" id="ConfirmPassword" placeholder="Confirm password" maxlength="255"></div>
 							<div class="formelement"><input type="submit" name="Update" value="Update" class="submitButton" id="updateButton"></div>
 						</form>
 					</div>

@@ -28,7 +28,7 @@
 		?>
 		<div id="navBarContainer">
 			<div id="navBar">
-				<a href="index.php"><img src="images/logo.png" id="logoImage"/></a>
+				<a href="index.php"><img src="images/logo.png" id="logoImage" alt="H2GO logo" /></a>
 				<ul id="navButtons">
 					<li class="navButton"><strong><a href="index.php">HOME</a></strong></li>
 					<li class="navButton"><strong><a href="shop.php">SHOP</a></strong></li>
