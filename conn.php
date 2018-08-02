@@ -1,3 +1,5 @@
+<!-- git link to repository is https://github.com/Nox-0/h2go -->
+
 <?php
 //Defines variables. The "$" means that it's the variable name
 $servername = "localhost";
